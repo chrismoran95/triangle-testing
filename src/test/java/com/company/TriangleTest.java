@@ -94,10 +94,10 @@ class TriangleTest {
     @Test
     void CheckPointTypeScalene()
     {
-        Point d = new Point(2,1);
-        Point e = new Point(1,3);
-        Point f = new Point(1,4);
-        Triangle te = new Triangle(d,e,f);
+        Point a = new Point(2,1);
+        Point b = new Point(1,3);
+        Point c = new Point(1,4);
+        Triangle te = new Triangle(a,b,c);
         assertEquals("Scalene", te.GetName());
     }
 
