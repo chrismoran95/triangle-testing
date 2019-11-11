@@ -102,6 +102,7 @@ class Triangle
         this(A.CalculateDistanceAB(B), B.CalculateDistanceBC(C), C.CalculateDistanceCA(A));
 
     }
+
     public double getArea()
     {
         semi = (firstside + otherside + longestside)/2;//semi perimeter
@@ -194,6 +195,15 @@ class Point
 
 
     }
+    public boolean ComparePoints(Point A) {
+        if(x==A.x && y==A.y)
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
     public double CalculateDistanceAB(Point initial)
     {
         distance = Math.sqrt((Math.pow((Math.abs(x- initial.x)), 2))+Math.pow((Math.abs(y- initial.y)),2));
@@ -210,6 +220,20 @@ class Point
 
         return distance;//calculates the distance
     }
+    public String display()
+    {
+        System.out.println(" "+x+" "+y);
+       return new String (" "+x+", "+y);
+    }
+    public double X()
+    {
+        return x;
+    }
+    public double Y()
+    {
+        return y;
+    }
+
     public double CalculateDistanceCA(Point initial)
     {
         distance = Math.sqrt((Math.pow((Math.abs(x- initial.x)), 2))+Math.pow((Math.abs(y- initial.y)),2));
